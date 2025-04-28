@@ -43,18 +43,16 @@ export const Profile = () => {
         <div>
             
             <h1>My Profile</h1>
-            <Stack direction="row"
-                divider={<Divider orientation="vertical" flexItem />}
-            >
-                <Stack direction="column"
-                    divider={<Divider orientation="vertical" flexItem />}
-                >
+            <Stack direction="row" style={{fontSize:"1.3rem",border:"3px solid blue",width:"50rem",padding:"1rem"}}>
+                <Stack direction="column">
                     <label htmlFor="username">User Name:</label>
                     <input type="text" id="username" name="username" defaultValue={currUser.username} readOnly={true} required/>
-                    <label htmlFor="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" defaultValue={currUser.fname} onChange={setUserDetails} required/>
-                    <label htmlFor="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" defaultValue={currUser.lname} onChange={setUserDetails} required/>
+                    <Stack>
+                        <label htmlFor="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" defaultValue={currUser.fname} onChange={setUserDetails} required/>
+                        <label htmlFor="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" defaultValue={currUser.lname} onChange={setUserDetails} required/>
+                    </Stack>
                     <label htmlFor="address">Address:</label>
                     <input type="text" id="address" name="address" defaultValue={currUser.address} onChange={setUserDetails} required/>
                     <label htmlFor="age">Age:</label>

@@ -7,6 +7,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 export const CartItem = ({ product }) => {
     const cart = useSelector(state => state.cart);
+    const cartTotal = useSelector(state => state.cartTotal);
     const orderQty = product.orderQty;
     const dispatch = useDispatch();
     
@@ -23,14 +24,14 @@ export const CartItem = ({ product }) => {
                 let tempArr = [...cart];
                 tempArr[itemIndex].orderQty --;
                 dispatch({ type: "UPDATE_CART", payload: tempArr })
-                dispatch({ type: "UPDATE_CARTTOTAL", payload: product.price * -1 })
+                dispatch({ type: "UPDATE_CARTTOTAL", payload: cartTotal - product.price })
             } 
         } else {
             if (orderQty < product.quantity) {
                 let tempArr = [...cart];
                 tempArr[itemIndex].orderQty ++;
                 dispatch({ type: "UPDATE_CART", payload: tempArr })
-                dispatch({ type: "UPDATE_CARTTOTAL", payload: product.price })
+                dispatch({ type: "UPDATE_CARTTOTAL", payload: cartTotal + product.price })
 
             }
         }
@@ -38,7 +39,7 @@ export const CartItem = ({ product }) => {
 
     const removeCartItem = () => {
         dispatch({ type: "UPDATE_CART", payload: cart.toSpliced((cart.findIndex(e=>e._id==product._id)),1) })
-        dispatch({ type: "UPDATE_CARTTOTAL", payload: product.price * orderQty * -1 })
+        dispatch({ type: "UPDATE_CARTTOTAL", payload: cartTotal - (product.price * orderQty) })
     }
 
     return (            

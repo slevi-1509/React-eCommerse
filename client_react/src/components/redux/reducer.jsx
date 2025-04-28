@@ -10,6 +10,7 @@ const inintialState = {
     updateCategory: {},
     cart: [],
     cartTotal: 0,
+    sendOrder: false
 };
 
 const reducer = (state = inintialState, action) => {
@@ -43,7 +44,10 @@ const reducer = (state = inintialState, action) => {
             state = {...state, cart: [...action.payload]}
             return state
         case "UPDATE_CARTTOTAL":
-            state = {...state, cartTotal: state.cartTotal+action.payload}
+            state = {...state, cartTotal: action.payload}
+            return state
+        case "SEND_ORDER":
+            state = {...state, sendOrder: action.payload}
             return state
         default:
             // console.log("Invalid action, state remains the same!")

@@ -1,75 +1,50 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { Button, Stack, Divider } from "@mui/material"
 import Slider from '@mui/material/Slider';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { CatalogItem } from "./CatalogItem" 
 import { Cart } from "./Cart" 
-import Axios from './helpers'
-import AppContext from './appContext';
 
 export const Catalog = () => {
-    const token = useSelector(state => state.token);
-    const currUser = useSelector(state => state.currUser);
     const categories = useSelector(state => state.categories);
     const products = useSelector(state => state.products);
     const [prodctsView, setProdctsView] = useState ([]);
     const [category, setCategory] = useState ("");
     const [minPrice, setMinPrice] = useState (0);
     const [maxPrice, setMaxPrice] = useState (0);
-    const [topPrice, setTopPrice] = useState (0);
+    const [selectedPrice, setSelectedPrice] = useState (0);
     const [title, setTitle] = useState ("");
     const [sort, setSort] = useState ("title");
     const [sortAsc, setSortAsc] = useState (true);
-    const dispatch = useDispatch();
 
     useEffect (() => {
-        const catalog = async () => {
-            await Axios("get", AppContext.MAIN_URL+'/categories', [token, currUser.username]).then((response) => {
-                if (typeof(response)=="string"){
-                    // alert ("No categories to show!")
-                } else {
-                    dispatch({ type: "GET_CATEGORIES", payload: response });
-                }   
-            });       
-            await Axios("get", AppContext.MAIN_URL+'/products', [token, currUser.username]).then((response) => {
-                if (typeof(response)=="string"){
-                    // alert ("No products to show!")
-                } else {
-                    setMinPrice (response.map(item=>{
-                        return +item.price
-                    }).reduce((accumulator, slip)=>{
-                        return Math.min(accumulator, slip);
-                    }));
-                    setMaxPrice (response.map(item=>{
-                        return +item.price
-                    }).reduce((accumulator, slip)=>{
-                        return Math.max(accumulator, slip);
-                    }));
-                    setTopPrice (response.map(item=>{
-                        return +item.price
-                    }).reduce((accumulator, slip)=>{
-                        return Math.max(accumulator, slip);
-                    }));
-                    setProdctsView(response.sort((a,b) => {
-                        if (a.title < b.title) {
-                          return -1;
-                        }
-                        if (a.title > b.title) {
-                          return 1;
-                        }
-                        return 0;
-                      }));
-                    dispatch({ type: "GET_PRODUCTS", payload: response });
-                }
-            });       
+        const catalog = () => {
+            if (products.length > 0) {
+                setMinPrice (products.map(item=>{
+                    return +item.price
+                }).reduce((accumulator, slip)=>{
+                    return Math.min(accumulator, slip);
+                }));
+                setMaxPrice (products.map(item=>{
+                    return +item.price
+                }).reduce((accumulator, slip)=>{
+                    return Math.max(accumulator, slip);
+                }));
+                setSelectedPrice (products.map(item=>{
+                    return +item.price
+                }).reduce((accumulator, slip)=>{
+                    return Math.max(accumulator, slip);
+                }));
+                setProdctsView(products);
+            }            
         }
         catalog();
-    }, [])
+    }, [products])
 
     const applyFilters = () => {
-        let tempArr = products.filter(product=>product.category.includes(category) && product.price <= topPrice && product.title.toLowerCase().includes(title.toLowerCase()));
+        let tempArr = products.filter(product=>product.category.includes(category) && product.price <= selectedPrice && product.title.toLowerCase().includes(title.toLowerCase()));
         if (sortAsc) {
             tempArr.sort(((a,b) => {
                 if (a[sort] < b[sort]) {
@@ -95,7 +70,7 @@ export const Catalog = () => {
     } 
 
     const clearFilters = () => {
-        setTopPrice(maxPrice);
+        setSelectedPrice(maxPrice);
         setTitle("");
         setCategory("");
         setProdctsView([...products]);
@@ -110,8 +85,8 @@ export const Catalog = () => {
             style={{width:"100%"}}
             >
                 <Cart/>
-                <Stack direction="column" style={{width:"50%",margin:"0 0 0 2rem"}}>
-                    <h1>Catalog</h1>
+                <Stack direction="column" style={{width:"40rem",margin:"0 0 0 1rem"}}>
+                    <h1>Products Catalog</h1>
                     <br/>
                     <h4>Filter by:</h4>
 
@@ -132,12 +107,12 @@ export const Catalog = () => {
                             <Slider 
                                 min={minPrice} 
                                 max={maxPrice} 
-                                value={topPrice}
+                                value={selectedPrice}
                                 valueLabelDisplay="on"
-                                onChange={(e)=>setTopPrice(e.target.value)} 
+                                onChange={(e)=>setSelectedPrice(e.target.value)} 
                             />
                         </div>
-                        <p> ${topPrice}</p>
+                        <p> ${selectedPrice}</p>
                         <label htmlFor="title">Title:</label>
                         <input type="text" id="title" name="title" style={{width:"5rem"}} value={title} onChange={(e)=>{setTitle(e.target.value)}} ></input>
                     </Stack>
@@ -150,6 +125,12 @@ export const Catalog = () => {
                             <option value="price" >Price</option>
                         </select>
                         <Button
+                            variant="contained" 
+                            size="large"
+                            sx={{
+                                height: "2rem",
+                                width: "3rem"
+                            }} 
                             onClick={()=>setSortAsc(!sortAsc)}
                         >
                             {sortAsc?<ArrowUpwardIcon/>:<ArrowDownwardIcon/>}
@@ -157,7 +138,7 @@ export const Catalog = () => {
                         <button onClick={applyFilters}>Apply</button>
                         <button onClick={clearFilters}>Clear</button>
                     </Stack>
-                    {prodctsView.length > 0 &&
+                    {products.length > 0 &&
                         <div> 
                             {prodctsView.map(product=>{
                                 return (

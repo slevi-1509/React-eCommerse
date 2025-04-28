@@ -1,32 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { Stack, Divider } from "@mui/material"
 import { TableComp } from "./TableComp" 
-import Axios from './helpers'
-import AppContext from './appContext';
 
 export const Orders = () => {
-    const token = useSelector(state => state.token);
-    const currUser = useSelector(state => state.currUser);
+    const orders = useSelector(state => state.orders);
     const [ordersView, setOrdersView] = useState ([])
-    const dispatch = useDispatch();
 
     useEffect (() => {
-        const customerOrders = async () => {
-            await Axios("get", AppContext.MAIN_URL+'/orders', [token, currUser.username]).then((response) => {
-                if (typeof(response)=="string"){
-                    // alert (response)
-                } else {
-                    setOrdersView(response.filter(item=>item.customerId==currUser._id).map(item => ({ 
-                        Title: item.title, 
-                        Qty: item.quantity,
-                        Total: +item.total,
-                        Date: new Date(item.createdAt).toLocaleDateString("he-IL", {dateStyle:"short"})
-                    })))
-                    dispatch({ type: "GET_ORDERS", payload: response });
-                }  
-                
-            }); 
+        const customerOrders = () => {   
+            setOrdersView(orders.map(item => ({ 
+                Title: item.title, 
+                Qty: item.quantity,
+                Total: +item.total,
+                Date: new Date(item.createdAt).toLocaleString("he-IL", {
+                    hourCycle: 'h23',
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"})
+            })))    
         }
         customerOrders();
     }, [])

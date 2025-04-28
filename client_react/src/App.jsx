@@ -25,7 +25,6 @@ AppContext.APP_PORT = 3300;
 AppContext.SERVER_IP = "http://localhost:";
 AppContext.AUTH_URL = AppContext.SERVER_IP+AppContext.APP_PORT+"/api/auth";
 AppContext.MAIN_URL = AppContext.SERVER_IP+AppContext.APP_PORT+"/api";
-AppContext.OPENAI_API_KEY = "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"
 
 return (
   <div className="appBody">

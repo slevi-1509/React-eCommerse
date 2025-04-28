@@ -7,6 +7,7 @@ import AppContext from './appContext';
 const Axios = async (action, serverURL, userDetails, data) => {
     // const token = useSelector(state => state.token);
     // const currUser = useSelector(state => state.currUser);
+    console.log("Axios");
     const requestHeader =  () => {
         return({
             headers: {

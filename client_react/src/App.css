@@ -7,6 +7,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 1rem;
   /* padding: 30px; */
 }
 
@@ -35,10 +36,11 @@ body {
 
 input {
   border-radius: 5px;
-  margin: 2px !important;
+  margin: 2px 2px 5px 2px !important;
   /* width: 18rem; */
 }
 
 label {
   float: left;
+  font-weight: bolder;
 } 

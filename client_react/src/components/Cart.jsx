@@ -14,7 +14,8 @@ export const Cart = () => {
     const currUser = useSelector(state => state.currUser);
     const cart = useSelector(state => state.cart);
     const cartTotal = useSelector(state => state.cartTotal);
-    // const [cartTotal, setCartTotal] = useState (0)
+    const orders = useSelector(state => state.orders);
+    const sendOrder = useSelector(state => state.sendOrder);
     const [collapsed, setCollapsed] = useState(false);
     const dispatch = useDispatch();
 
@@ -24,16 +25,6 @@ export const Cart = () => {
         }
         myCart();
     }, [])
-
-    const getCartTotal = () => {
-        if (cart.length > 0){
-            setCartTotal (cart.map(item=>{
-                return +item.price * +item.orderQty
-            }).reduce((total,num)=>{
-                return total + num;
-            }))
-        }
-    }
 
     const processOrder = async () => {
         if (cart.length == 0) {
@@ -50,7 +41,11 @@ export const Cart = () => {
             }))
             await Axios("post", AppContext.MAIN_URL+'/orders', [token, currUser.username], tempArr).then((response) => {
                 dispatch({ type: "UPDATE_CART", payload: [] });
-    
+                dispatch({ type: "UPDATE_CARTTOTAL", payload: 0 })
+                dispatch({ type: "SEND_ORDER", payload: !sendOrder })
+
+                // dispatch({ type: "GET_PRODUCTS", payload: response });             
+                // dispatch({ type: "GET_ORDERS", payload: [...orders, ...tempArr ]});             
             });   
         }
     }
@@ -66,7 +61,7 @@ export const Cart = () => {
                 size="large"
                 sx={{
                     height: "2rem",
-                    width: "3rem"
+                    width: "2rem"
                 }} 
                 onClick={handleToggleSidebar}>{collapsed?<KeyboardDoubleArrowRightIcon/>:<KeyboardDoubleArrowLeftIcon/>}
             </Button>

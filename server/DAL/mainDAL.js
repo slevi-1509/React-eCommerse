@@ -141,6 +141,15 @@ const getProducts = async () => {
     try {
         let products = await productModel.find({});
         if (products.length > 0) {
+            products.sort(((a,b) => {
+                if (a.title < b.title) {
+                    return -1;
+                }
+                if (a.title > b.title) {
+                    return 1;
+                }
+                return 0;
+            }));
             return products;
         } else {
             return "No products found!"
@@ -194,8 +203,17 @@ const getOrders = async () => {
 
 const getOrdersByUserId = async (id)=>{
     try{
-        let orders = await orderModel.find({userId: id});
+        let orders = await orderModel.find({customerId: id});
         if (orders.length > 0) {
+            orders.sort(((a,b) => {
+                if (a.createdAt < b.createdAt) {
+                    return 1;
+                }
+                if (a.createdAt > b.createdAt) {
+                    return -1;
+                }
+                return 0;
+            }));
             return orders;
         } else {
             return "No orders found!"
@@ -211,7 +229,7 @@ const addOrder = async (data)=>{
         data.forEach (async e => {
             await productModel.findOneAndUpdate(
                 { "_id": e.productId },
-                { $inc: { quantity: -e.quantity } }
+                { $inc: { quantity: -e.quantity, bought: e.quantity } }
             )
         });
         return await getProducts();

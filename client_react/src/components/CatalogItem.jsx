@@ -3,36 +3,16 @@ import { useDispatch, useSelector } from "react-redux"
 import { Button, Stack, Divider } from "@mui/material"
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import Axios from './helpers'
-import AppContext from './appContext';
 
 export const CatalogItem = ({ product }) => {
     const cart = useSelector(state => state.cart);
-    const token = useSelector(state => state.token);
-    const currUser = useSelector(state => state.currUser);
-    const orders = useSelector(state => state.orders);
     const cartTotal = useSelector(state => state.cartTotal);
     const [orderQty, setOrderQty] = useState (0)
-    const [productBought, setProductBought] = useState (0)
     const dispatch = useDispatch();
 
     useEffect (() => {
-        const catalogItem = async () => {
-            await Axios("get", AppContext.MAIN_URL+'/orders', [token, currUser.username]).then((response) => {
-                if (typeof(response)=="string"){
-                    // alert (response)
-                } else {
-                    dispatch({ type: "GET_ORDERS", payload: response });
-                    setProductBought(
-                        response.filter(order=>{
-                            return order.productId==product._id
-                        }).reduce((total, item)=>{
-                            return total + item.quantity
-                        }, 0)
-                    )
-                }  
-                
-            }); 
+        const catalogItem = () => {
+
         }
         catalogItem();
     }, [])
@@ -51,7 +31,7 @@ export const CatalogItem = ({ product }) => {
                 }
                 
             }
-            dispatch({ type: "UPDATE_CARTTOTAL", payload: product.price * orderQty })
+            dispatch({ type: "UPDATE_CARTTOTAL", payload: cartTotal + (product.price * orderQty) })
         } else {
             alert ("Select at least 1 item to add to cart !!!")
         }
@@ -71,7 +51,7 @@ export const CatalogItem = ({ product }) => {
                 </Stack>
                 <Stack direction="column">
                     <img src={product.imageURL} style={{height:"9rem",width:"9rem",margin:"1rem",border:"2px solid orange"}}></img>
-                    <h4 style={{margin:"0 0 0 3rem"}}>Bought: {productBought}</h4>
+                    <h4 style={{margin:"0 0 0 3rem"}}>Bought: {product.bought}</h4>
                 </Stack>
             </Stack>
             <Stack direction="row"
