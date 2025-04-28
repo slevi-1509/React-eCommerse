@@ -1,0 +1,369 @@
+[{
+  "title": "Adidas Ultraboost",
+  "category": "Clothing",
+  "total": 360,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca526",
+  "customerId": "680bac2d66b7bc6ea50ca4fd",
+  "customerName": "Sagiv Levi"
+},
+{
+  "title": "Dell XPS 13",
+  "category": "Computers",
+  "total": 2000,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51a",
+  "customerId": "680bac2d66b7bc6ea50ca4fd",
+  "customerName": "Sagiv Levi"
+},
+{
+  "title": "LG Smart Refrigerator",
+  "category": "Appliances",
+  "total": 1600,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca524",
+  "customerId": "680bac2d66b7bc6ea50ca4fd",
+  "customerName": "Sagiv Levi"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 200,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2d66b7bc6ea50ca4fd",
+  "customerName": "Sagiv Levi"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 400,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2d66b7bc6ea50ca4ff",
+  "customerName": "David Cohen"
+},
+{
+  "title": "PetSafe Petsafe ScoopFree",
+  "category": "Pet Supply",
+  "total": 420,
+  "quantity": 3,
+  "productId": "680bac2f66b7bc6ea50ca521",
+  "customerId": "680bac2d66b7bc6ea50ca4ff",
+  "customerName": "David Cohen"
+},
+{
+  "title": "Understanding Books",
+  "category": "Books",
+  "total": 16,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca520",
+  "customerId": "680bac2d66b7bc6ea50ca4ff",
+  "customerName": "David Cohen"
+},
+{
+  "title": "Whirlpool Top Load Washer",
+  "category": "Appliances",
+  "total": 500,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51d",
+  "customerId": "680bac2d66b7bc6ea50ca4ff",
+  "customerName": "David Cohen"
+},
+{
+  "title": "Whirlpool Top Load Washer",
+  "category": "Appliances",
+  "total": 1000,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51d",
+  "customerId": "680bac2d66b7bc6ea50ca501",
+  "customerName": "Anat Shir"
+},
+{
+  "title": "Understanding Books",
+  "category": "Books",
+  "total": 16,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca520",
+  "customerId": "680bac2d66b7bc6ea50ca501",
+  "customerName": "Anat Shir"
+},
+{
+  "title": "Samsung Galaxy S21",
+  "category": "Computers",
+  "total": 800,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51b",
+  "customerId": "680bac2d66b7bc6ea50ca501",
+  "customerName": "Anat Shir"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 400,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2d66b7bc6ea50ca501",
+  "customerName": "Anat Shir"
+},
+{
+  "title": "Adidas Ultraboost",
+  "category": "Clothing",
+  "total": 180,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca526",
+  "customerId": "680bac2d66b7bc6ea50ca503",
+  "customerName": "Shimon Aflalo"
+},
+{
+  "title": "Bosch 12V Max Drill",
+  "category": "Tools",
+  "total": 180,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca522",
+  "customerId": "680bac2d66b7bc6ea50ca503",
+  "customerName": "Shimon Aflalo"
+},
+{
+  "title": "Makita XFD131 18V",
+  "category": "Tools",
+  "total": 130,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca527",
+  "customerId": "680bac2d66b7bc6ea50ca503",
+  "customerName": "Shimon Aflalo"
+},
+{
+  "title": "Nike Air Max 270",
+  "category": "Clothing",
+  "total": 150,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51e",
+  "customerId": "680bac2d66b7bc6ea50ca503",
+  "customerName": "Shimon Aflalo"
+},
+{
+  "title": "Dell XPS 13",
+  "category": "Computers",
+  "total": 1000,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51a",
+  "customerId": "680bac2e66b7bc6ea50ca505",
+  "customerName": "Avi Kadosh"
+},
+{
+  "title": "Kindle Oasis",
+  "category": "Books",
+  "total": 250,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca523",
+  "customerId": "680bac2e66b7bc6ea50ca505",
+  "customerName": "Avi Kadosh"
+},
+{
+  "title": "LG Smart Refrigerator",
+  "category": "Appliances",
+  "total": 3200,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca524",
+  "customerId": "680bac2e66b7bc6ea50ca505",
+  "customerName": "Avi Kadosh"
+},
+{
+  "title": "Understanding Books",
+  "category": "Books",
+  "total": 16,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca520",
+  "customerId": "680bac2e66b7bc6ea50ca505",
+  "customerName": "Avi Kadosh"
+},
+{
+  "title": "Whirlpool Top Load Washer",
+  "category": "Appliances",
+  "total": 500,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51d",
+  "customerId": "680bac2e66b7bc6ea50ca505",
+  "customerName": "Avi Kadosh"
+},
+{
+  "title": "Kindle Oasis",
+  "category": "Books",
+  "total": 250,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca523",
+  "customerId": "680bac2e66b7bc6ea50ca507",
+  "customerName": "Haim Biton"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 200,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2e66b7bc6ea50ca507",
+  "customerName": "Haim Biton"
+},
+{
+  "title": "Samsung Galaxy S21",
+  "category": "Computers",
+  "total": 1600,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51b",
+  "customerId": "680bac2e66b7bc6ea50ca507",
+  "customerName": "Haim Biton"
+},
+{
+  "title": "Vizio 50-Inch 4K TV",
+  "category": "TV",
+  "total": 350,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51c",
+  "customerId": "680bac2e66b7bc6ea50ca507",
+  "customerName": "Haim Biton"
+},
+{
+  "title": "Dell XPS 13",
+  "category": "Computers",
+  "total": 3000,
+  "quantity": 3,
+  "productId": "680bac2f66b7bc6ea50ca51a",
+  "customerId": "680bac2e66b7bc6ea50ca509",
+  "customerName": "Sharon Tene"
+},
+{
+  "title": "Makita XFD131 18V",
+  "category": "Tools",
+  "total": 130,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca527",
+  "customerId": "680bac2e66b7bc6ea50ca509",
+  "customerName": "Sharon Tene"
+},
+{
+  "title": "PetSafe Petsafe ScoopFree",
+  "category": "Pet Supply",
+  "total": 280,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca521",
+  "customerId": "680bac2e66b7bc6ea50ca509",
+  "customerName": "Sharon Tene"
+},
+{
+  "title": "Dell XPS 13",
+  "category": "Computers",
+  "total": 3000,
+  "quantity": 3,
+  "productId": "680bac2f66b7bc6ea50ca51a",
+  "customerId": "680bac2e66b7bc6ea50ca50b",
+  "customerName": "Leon Carmi"
+},
+{
+  "title": "Adidas Ultraboost",
+  "category": "Clothing",
+  "total": 180,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca526",
+  "customerId": "680bac2e66b7bc6ea50ca50b",
+  "customerName": "Leon Carmi"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 200,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2e66b7bc6ea50ca50b",
+  "customerName": "Leon Carmi"
+},
+{
+  "title": "Sony WH-1000XM4",
+  "category": "Computers",
+  "total": 700,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca525",
+  "customerId": "680bac2e66b7bc6ea50ca50b",
+  "customerName": "Leon Carmi"
+},
+{
+  "title": "Bosch 12V Max Drill",
+  "category": "Tools",
+  "total": 90,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca522",
+  "customerId": "680bac2f66b7bc6ea50ca50d",
+  "customerName": "Lior Chen"
+},
+{
+  "title": "Makita XFD131 18V",
+  "category": "Tools",
+  "total": 130,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca527",
+  "customerId": "680bac2f66b7bc6ea50ca50d",
+  "customerName": "Lior Chen"
+},
+{
+  "title": "Samsung Galaxy S21",
+  "category": "Computers",
+  "total": 1600,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca51b",
+  "customerId": "680bac2f66b7bc6ea50ca50d",
+  "customerName": "Lior Chen"
+},
+{
+  "title": "Nike Air Max 270",
+  "category": "Clothing",
+  "total": 150,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51e",
+  "customerId": "680bac2f66b7bc6ea50ca50d",
+  "customerName": "Lior Chen"
+},
+{
+  "title": "Adidas Ultraboost",
+  "category": "Clothing",
+  "total": 360,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca526",
+  "customerId": "680bac2f66b7bc6ea50ca50f",
+  "customerName": "Eli Yosef"
+},
+{
+  "title": "Kindle Oasis",
+  "category": "Books",
+  "total": 500,
+  "quantity": 2,
+  "productId": "680bac2f66b7bc6ea50ca523",
+  "customerId": "680bac2f66b7bc6ea50ca50f",
+  "customerName": "Eli Yosef"
+},
+{
+  "title": "Dell XPS 13",
+  "category": "Computers",
+  "total": 1000,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51a",
+  "customerId": "680bac2f66b7bc6ea50ca50f",
+  "customerName": "Eli Yosef"
+},
+{
+  "title": "Bosch 12V Max Drill",
+  "category": "Tools",
+  "total": 90,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca522",
+  "customerId": "680bac2f66b7bc6ea50ca50f",
+  "customerName": "Eli Yosef"
+},
+{
+  "title": "Milwaukee 2730-20 M18",
+  "category": "Tools",
+  "total": 200,
+  "quantity": 1,
+  "productId": "680bac2f66b7bc6ea50ca51f",
+  "customerId": "680bac2f66b7bc6ea50ca50f",
+  "customerName": "Eli Yosef"
+}]

@@ -1,0 +1,37 @@
+.tableContainer {
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    border: 2px solid black;
+}
+
+/* To display the block as level element */
+thead {
+    /* width:initial inherit; */
+    /* display:inline-block; */
+    width: 100%;
+}
+
+tbody {
+
+    /* Set the height of table body */
+    /* height: 20px; */
+
+    /* Set vertical scroll */
+    overflow-y: auto;
+
+    /* Hide the horizontal scroll */
+    overflow-x: hidden;
+}
+
+/* tbody {
+    border-top: 2px solid black;
+} */
+
+td, th {
+    /* width: 30rem; */
+    /* border: 2px solid black; */
+}
+
+td {
+    text-align: left;
+}

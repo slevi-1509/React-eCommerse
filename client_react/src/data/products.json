@@ -1,0 +1,114 @@
+[
+  {
+      "title": "Dell XPS 13",
+      "category": "Computers",
+      "description": "Premium laptop with 13.4-inch display, Intel Core i7 processor.",
+      "price": 1000,
+      "imageURL": "http://example.com/dell-xps13.jpg",
+      "quantity": 50
+  },
+  {
+      "title": "Samsung Galaxy S21",
+      "category": "Computers",
+      "description": "Latest smartphone with remarkable camera features and performance.",
+      "price": 800,
+      "imageURL": "http://example.com/galaxy-s21.jpg",
+      "quantity": 150
+  },
+  {
+      "title": "Vizio 50-Inch 4K TV",
+      "category": "TV",
+      "description": "Stunning 50-inch 4K Ultra HD Smart TV with HDR.",
+      "price": 349,
+      "imageURL": "http://example.com/vizio-50-4k.jpg",
+      "quantity": 75
+  },
+  {
+      "title": "Whirlpool Top Load Washer",
+      "category": "Appliances",
+      "description": "High-efficiency washer with large capacity.",
+      "price": 500,
+      "imageURL": "http://example.com/whirlpool-washer.jpg",
+      "quantity": 30
+  },
+  {
+      "title": "Nike Air Max 270",
+      "category": "Clothing",
+      "description": "Stylish sneakers with a comfortable fit.",
+      "price": 150,
+      "imageURL": "http://example.com/air-max-270.jpg",
+      "quantity": 80
+  },
+  {
+      "title": "Milwaukee 2730-20 M18",
+      "category": "Tools",
+      "description": "Cordless circular saw for efficient wood cutting.",
+      "price": 200,
+      "imageURL": "http://example.com/milwaukee-saw.jpg",
+      "quantity": 45
+  },
+  {
+      "title": "Understanding Books",
+      "category": "Books",
+      "description": "A bestseller that expands your knowledge on various topics.",
+      "price": 16,
+      "imageURL": "http://example.com/understanding-books.jpg",
+      "quantity": 200
+  },
+  {
+      "title": "PetSafe Petsafe ScoopFree",
+      "category": "Pet Supply",
+      "description": "Automatic self-cleaning litter box for cats.",
+      "price": 140,
+      "imageURL": "http://example.com/petsafe-litter.jpg",
+      "quantity": 60
+  },
+  {
+      "title": "Bosch 12V Max Drill",
+      "category": "Tools",
+      "description": "Compact, lightweight drill with two-speed settings.",
+      "price": 90,
+      "imageURL": "http://example.com/bosch-drill.jpg",
+      "quantity": 100
+  },
+  {
+      "title": "Kindle Oasis",
+      "category": "Books",
+      "description": "The advanced Kindle for those who love reading.",
+      "price": 250,
+      "imageURL": "http://example.com/kindle-oasis.jpg",
+      "quantity": 150
+  },
+  {
+      "title": "LG Smart Refrigerator",
+      "category": "Appliances",
+      "description": "Stylish refrigerator with smart technology and spacious interior.",
+      "price": 1600,
+      "imageURL": "http://example.com/lg-fridge.jpg",
+      "quantity": 20
+  },
+  {
+      "title": "Sony WH-1000XM4",
+      "category": "Computers",
+      "description": "Noise-canceling over-ear wireless headphones.",
+      "price": 350,
+      "imageURL": "http://example.com/sony-headphones.jpg",
+      "quantity": 90
+  },
+  {
+      "title": "Adidas Ultraboost",
+      "category": "Clothing",
+      "description": "Comfortable running shoes with responsive cushioning.",
+      "price": 180,
+      "imageURL": "http://example.com/adidas-ultraboost.jpg",
+      "quantity": 70
+  },
+  {
+      "title": "Makita XFD131 18V",
+      "category": "Tools",
+      "description": "Brushless cordless drill with two-speed transmission.",
+      "price": 130,
+      "imageURL": "http://example.com/makita-drill",
+      "quantity": 70
+  }
+]
