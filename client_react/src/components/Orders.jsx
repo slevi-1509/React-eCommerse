@@ -33,7 +33,7 @@ export const Orders = () => {
             >
                 <h1>Orders</h1>
                 {ordersView.length > 0 &&   
-                    <TableComp header={["Title","Qty","Total","Date"]} data={ordersView}/>  
+                    <TableComp header={["Title","Qty","Total","Date"]} data={ordersView} tableHeight="fit-content" tableWidth="60rem"/>  
                 }  
             </Stack>
         </div>       

@@ -37,7 +37,9 @@ export const Product = ({ product, addProduct, setAddProduct }) => {
     
     const addNewProduct = async () => {
         await Axios("post", AppContext.MAIN_URL+'/products', [token, currUser.username], updatedProduct).then((response) => {
-            if (typeof(response) != "string") {
+            if (response.includes("Error")) {
+                alert(response);
+            } else {
                 dispatch({ type: "GET_PRODUCTS", payload: response });    
                 setAddProduct(false);
             }
@@ -50,7 +52,9 @@ export const Product = ({ product, addProduct, setAddProduct }) => {
         } else {
             setUpdateColor('success')
             await Axios("put", AppContext.MAIN_URL+'/products/'+product._id, [token, currUser.username], updatedProduct).then((response) => {
-                if (typeof(response) != "string") {
+                if (response.includes("Error")) {
+                    alert(response);
+                } else { 
                     dispatch({ type: "GET_PRODUCTS", payload: response });    
                 }    
             });
@@ -124,12 +128,14 @@ export const Product = ({ product, addProduct, setAddProduct }) => {
                         </Button>
                     </Stack>
                 </Stack>
-                <Stack direction="column" style={{width:"50%",margin:"10px"}}>
-                    <label>Bought by:</label>
-                    {ordersView.length > 0 &&   
-                        <TableComp style={{width:"100%",margin:"10px"}} header={["Name","Qty","Date"]} data={ordersView} tableHeight={"30px"} tableWidth={"100%"}/>  
-                    }  
-                </Stack>
+                {!addProduct && 
+                    <Stack direction="column" style={{width:"50%",margin:"10px"}}>
+                        <label>Bought by:</label>
+                        {ordersView.length > 0 &&   
+                            <TableComp style={{width:"100%",margin:"10px"}} header={["Name","Qty","Date"]} data={ordersView} tableHeight={"30px"} tableWidth={"100%"}/>  
+                        }  
+                    </Stack>
+                }
             </Stack>
             
         </div>                      

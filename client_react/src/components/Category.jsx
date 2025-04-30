@@ -21,13 +21,14 @@ export const Category = ({ cat }) => {
         }, [])
 
     const updateCategoryName = async(e) => {
-        // debugger;
         if (updateCategory){
             setUpdateColor('error')
         } else {
             setUpdateColor('success')
             await Axios("put", AppContext.MAIN_URL+'/categories/'+cat._id, [token, currUser.username], {name: newCategoryName}).then((response) => {
-                if (typeof(response) != "string") {
+                if (response.includes("Error")) {
+                    alert(response);
+                } else {
                     dispatch({ type: "GET_CATEGORIES", payload: response });    
                 }  
             });            

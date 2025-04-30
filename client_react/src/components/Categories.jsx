@@ -26,7 +26,9 @@ export const Categories = () => {
 
     const addCategory = async () => {
         await Axios("post", AppContext.MAIN_URL+'/categories', [token, currUser.username], {name: newCategoryName}).then((response) => {
-            if (typeof(response) != "string") {
+            if (response.includes("Error")) {
+                alert(response);
+            } else {
                 dispatch({ type: "GET_CATEGORIES", payload: response });    
             }});                
     }

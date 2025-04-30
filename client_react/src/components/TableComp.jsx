@@ -17,7 +17,6 @@ export const TableComp = ({ header, data, tableHeight, tableWidth }) => {
     }, [])
 
     const sortTable = (e, h) => {
-        // debugger;
         let tempArr = [];
         let indexArr = [];
         if (e.target.cellIndex==lastCellIndex[0]){
@@ -53,11 +52,10 @@ export const TableComp = ({ header, data, tableHeight, tableWidth }) => {
 
     return (
         <div>
-            <Table className='tableContainer' striped bordered hover>
-                <thead style={{width:"100%"}}>
+            <Table className='tableContainer' style={{width: tableWidth}} striped bordered hover>
+                <thead >
                     <tr>
                         {tableHeader.map((h, index) => {
-                            let headerWidth = "33%"
                             return(
                                 // <th>#</th>
                                 <th style={{cursor:'pointer'}} key={index} onClick={(e)=>sortTable(e, h)} >{h}</th>

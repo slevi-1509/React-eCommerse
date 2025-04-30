@@ -85,7 +85,7 @@ export const Catalog = () => {
             style={{width:"100%"}}
             >
                 <Cart/>
-                <Stack direction="column" style={{width:"40rem",margin:"0 0 0 1rem"}}>
+                <Stack direction="column" style={{width:"35rem",margin:"0 0 0 1rem"}}>
                     <h1>Products Catalog</h1>
                     <br/>
                     <h4>Filter by:</h4>
