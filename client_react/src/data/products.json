@@ -4,7 +4,7 @@
       "category": "Computers",
       "description": "Premium laptop with 13.4-inch display, Intel Core i7 processor.",
       "price": 1000,
-      "imageURL": "http://example.com/dell-xps13.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=1",
       "quantity": 50,
       "bought": 0
   },
@@ -13,7 +13,7 @@
       "category": "Computers",
       "description": "Latest smartphone with remarkable camera features and performance.",
       "price": 800,
-      "imageURL": "http://example.com/galaxy-s21.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=2",
       "quantity": 150,
       "bought": 0
   },
@@ -22,7 +22,7 @@
       "category": "TV",
       "description": "Stunning 50-inch 4K Ultra HD Smart TV with HDR.",
       "price": 349,
-      "imageURL": "http://example.com/vizio-50-4k.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=3",
       "quantity": 75,
       "bought": 0
   },
@@ -31,7 +31,7 @@
       "category": "Appliances",
       "description": "High-efficiency washer with large capacity.",
       "price": 500,
-      "imageURL": "http://example.com/whirlpool-washer.jpg",
+      "imageURL": "hhttps://picsum.photos/200/300?random=4",
       "quantity": 30,
       "bought": 0
   },
@@ -40,7 +40,7 @@
       "category": "Clothing",
       "description": "Stylish sneakers with a comfortable fit.",
       "price": 150,
-      "imageURL": "http://example.com/air-max-270.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=5",
       "quantity": 80,
       "bought": 0
   },
@@ -49,7 +49,7 @@
       "category": "Tools",
       "description": "Cordless circular saw for efficient wood cutting.",
       "price": 200,
-      "imageURL": "http://example.com/milwaukee-saw.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=6",
       "quantity": 45,
       "bought": 0
   },
@@ -58,7 +58,7 @@
       "category": "Books",
       "description": "A bestseller that expands your knowledge on various topics.",
       "price": 16,
-      "imageURL": "http://example.com/understanding-books.jpg",
+      "imageURL": "V7",
       "quantity": 200,
       "bought": 0
   },
@@ -67,7 +67,7 @@
       "category": "Pet Supply",
       "description": "Automatic self-cleaning litter box for cats.",
       "price": 140,
-      "imageURL": "http://example.com/petsafe-litter.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=8",
       "quantity": 60,
       "bought": 0
   },
@@ -76,7 +76,7 @@
       "category": "Tools",
       "description": "Compact, lightweight drill with two-speed settings.",
       "price": 90,
-      "imageURL": "http://example.com/bosch-drill.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=9",
       "quantity": 100,
       "bought": 0
   },
@@ -85,7 +85,7 @@
       "category": "Books",
       "description": "The advanced Kindle for those who love reading.",
       "price": 250,
-      "imageURL": "http://example.com/kindle-oasis.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=10",
       "quantity": 150,
       "bought": 0
   },
@@ -94,7 +94,7 @@
       "category": "Appliances",
       "description": "Stylish refrigerator with smart technology and spacious interior.",
       "price": 1600,
-      "imageURL": "http://example.com/lg-fridge.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=11",
       "quantity": 20,
       "bought": 0
   },
@@ -103,7 +103,7 @@
       "category": "Computers",
       "description": "Noise-canceling over-ear wireless headphones.",
       "price": 350,
-      "imageURL": "http://example.com/sony-headphones.jpg",
+      "imageURL": "https://picsum.photos/200/300?random=12",
       "quantity": 90,
       "bought": 0
   },
@@ -112,7 +112,7 @@
       "category": "Clothing",
       "description": "Comfortable running shoes with responsive cushioning.",
       "price": 180,
-      "imageURL": "http://example.com/adidas-ultraboost.jpg",
+      "imageURL": "hhttps://picsum.photos/200/300?random=13",
       "quantity": 70,
       "bought": 0
   },
@@ -121,7 +121,7 @@
       "category": "Tools",
       "description": "Brushless cordless drill with two-speed transmission.",
       "price": 130,
-      "imageURL": "http://example.com/makita-drill",
+      "imageURL": "https://picsum.photos/200/300?random=14",
       "quantity": 70,
       "bought": 0
   }

@@ -42,6 +42,7 @@ export const CatalogItem = ({ product }) => {
             <Stack direction="row">
                 <Stack direction="column"
                     divider={<Divider orientation="vertical" flexItem />}
+                    sx={{width:"25rem"}}
                     >
                         <h2>{product.title}</h2>
                         <h5>{product.description}</h5>

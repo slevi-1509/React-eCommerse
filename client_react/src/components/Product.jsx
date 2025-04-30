@@ -89,13 +89,40 @@ export const Product = ({ product, addProduct, setAddProduct }) => {
                         }
                     </select>
                     <label htmlFor='description'>Description:</label>
-                    <textarea type="text" id="description" name="description" readOnly={updateProduct} defaultValue={product.description} onChange={getProductDetails} ></textarea >
+                    <textarea type="text" id="description" name="description" readOnly={updateProduct} defaultValue={product.description} 
+                        style={{maxHeight:"10rem",minHeight:"4rem"}} onChange={getProductDetails} ></textarea >
                     <label htmlFor='price'>Price:</label>
                     <input type="number" id="price" name="price" readOnly={updateProduct} defaultValue={product.price} onChange={getProductDetails} ></input>
                     <label htmlFor='imageURL'>Image URL:</label>
                     <input type="text" id="imageURL" name="imageURL" readOnly={updateProduct} defaultValue={product.imageURL} onChange={getProductDetails} ></input>
                     <label htmlFor='quantity'>Quantity:</label>
                     <input type="number" id="quantity" name="quantity" readOnly={updateProduct} defaultValue={product.quantity} onChange={getProductDetails} ></input>
+                    <label htmlFor='bought'>Bought:</label>
+                    <input type="number" id="bought" name="bought" readOnly={updateProduct} defaultValue={product.bought} onChange={getProductDetails} ></input>
+                    <Stack direction="row" style={{margin:"10px 0 0 0"}}>
+                        <Button 
+                            variant="contained" 
+                            size="small"
+                            color={updateColor}
+                            onClick={addProduct?addNewProduct:updateProductDetails}
+                            sx={{
+                                fontSize: "0.7rem",
+                            }} 
+                        >
+                        {addProduct?"Add":"Update"}
+                        </Button>
+
+                        <Button 
+                            variant="contained" 
+                            size="small" 
+                            onClick={addProduct?()=>setAddProduct(false):deleteProduct}
+                            sx={{
+                                fontSize: "0.7rem",
+                            }} 
+                        >
+                        {addProduct?"Cancel":"Remove"}
+                        </Button>
+                    </Stack>
                 </Stack>
                 <Stack direction="column" style={{width:"50%",margin:"10px"}}>
                     <label>Bought by:</label>
@@ -104,30 +131,7 @@ export const Product = ({ product, addProduct, setAddProduct }) => {
                     }  
                 </Stack>
             </Stack>
-            <br/>
-            <Button 
-                variant="contained" 
-                size="small"
-                color={updateColor}
-                onClick={addProduct?addNewProduct:updateProductDetails}
-                sx={{
-                    fontSize: "0.7rem",
-                }} 
-            >
-            {addProduct?"Add":"Update"}
-            </Button>
-
-            <Button 
-                variant="contained" 
-                size="small" 
-                onClick={addProduct?()=>setAddProduct(false):deleteProduct}
-                sx={{
-                    fontSize: "0.7rem",
-                }} 
-            >
-            {addProduct?"Cancel":"Remove"}
-            </Button>
-            <br/>      
+            
         </div>                      
     )
 }
