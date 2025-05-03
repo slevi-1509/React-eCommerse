@@ -35,7 +35,7 @@ export const Login = () => {
                 if (typeof response == "string"){
                     alert(response);
                 } else {
-                    setCookie(userLogin.username, response.token, {
+                    setCookie(response.user._id, response.token, {
                         path: "/",
                         secure: false,
                         sameSite: "strict",

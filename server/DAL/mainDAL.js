@@ -22,6 +22,7 @@ const getAllUsers = async() => {
 const getUserById = async(id) => {
     try{
         let user = await userModel.findById(id);
+        // console.log(user)
         if (user) {
             return user;
         } else {

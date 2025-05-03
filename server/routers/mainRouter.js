@@ -34,6 +34,12 @@ router.get('/users', validateToken, async (req, res) => {
     res.send(response);
 });
 
+router.get('/users/:id', validateToken, async (req, res) => {
+    let { id } = req.params;
+    let response = await mainBLL.getUserById(id);
+    res.send(response);
+});
+
 router.put('/users/:id', validateToken, async (req, res) => {
     let { id } = req.params;
     let data = req.body;
@@ -115,12 +121,6 @@ router.get('/orders/:id', validateToken, async (req, res) => {
 router.post('/orders', validateToken, async (req, res) => {
     let newOrder = req.body;
     let response = await mainBLL.addOrder(newOrder);
-    res.send(response);
-});
-
-router.get('/:id', validateToken, async (req, res) => {
-    let { id } = req.params;
-    let response = await mainBLL.getUserById(id);
     res.send(response);
 });
 

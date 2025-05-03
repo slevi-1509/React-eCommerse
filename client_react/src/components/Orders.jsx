@@ -24,7 +24,7 @@ export const Orders = () => {
             })))    
         }
         customerOrders();
-    }, [])
+    }, [orders])
     
     return (   
         <div>

@@ -1,6 +1,5 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom"
-// import { UsersComp } from "../src/components/Users_Comps/UsersComp"
 import { Login } from "../src/components/Login"
 import { Register } from "../src/components/Register"
 import { AdminPage } from "./components/AdminPage"

@@ -27,7 +27,7 @@ export const Cart = () => {
     }, [])
 
     const processOrder = async () => {
-        if (cart.length == 0) {
+        if (cartTotal == 0) {
             alert ("Your cart is empty, buy something !!!")
         } else {
             let tempArr = cart.map(item => ({ 
@@ -43,9 +43,7 @@ export const Cart = () => {
                 dispatch({ type: "UPDATE_CART", payload: [] });
                 dispatch({ type: "UPDATE_CARTTOTAL", payload: 0 })
                 dispatch({ type: "SEND_ORDER", payload: !sendOrder })
-
-                // dispatch({ type: "GET_PRODUCTS", payload: response });             
-                // dispatch({ type: "GET_ORDERS", payload: [...orders, ...tempArr ]});             
+                alert ("Your order was completetd successfully!")
             });   
         }
     }

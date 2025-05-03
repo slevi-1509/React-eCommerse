@@ -6,7 +6,7 @@ const validateToken = async (req, res, next) => {
     if (!token) {
         res.send('No token provided.');
     } else {
-        let response;
+        // let response;
         try {
             jwt.verify(token, process.env.SECRET_KEY);
             // let { username } = req.query
