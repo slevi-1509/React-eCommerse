@@ -2,9 +2,6 @@ const express = require('express');
 const mainBLL = require('../BLL/mainBLL');
 const router = express.Router();
 const validateToken = require('../utils/validateToken');
-const userModel = require('../models/userModel');
-const categoryModel = require('../models/categoryModel');
-const productModel = require('../models/productModel');
 
 // router.get(api_location, validateToken, async (req, res) => {
 //     console.log(api_location);

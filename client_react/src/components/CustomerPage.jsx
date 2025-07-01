@@ -79,13 +79,13 @@ export const CustomerPage = () => {
                 >
                 <h1>Hello, {currUser.fname} {currUser.lname}</h1>
                 <Stack spacing={2} direction="row" fontSize="1.5rem" style={{margin:"2rem 0 2rem 0"}}>
-                    <Link to={'Catalog'}>
+                    <Link to={'catalog'}>
                         Catalog
                     </Link>
-                    <Link to={'Orders'}>
+                    <Link to={'orders'}>
                         Orders
                     </Link>
-                    <Link to={'Profile'}>
+                    <Link to={'profile'}>
                         My Profile
                     </Link>
                      <button onClick={()=>{logoutUser("Logging out...\nSorry to see you go")}}>

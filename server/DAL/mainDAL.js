@@ -6,14 +6,9 @@ const bcrypt = require("bcrypt");
 // const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-const getAllUsers = async() => {
+const getAllUsers = () => {
     try {
-        let allUsers = await userModel.find({});
-        if (allUsers.length > 0) {
-            return allUsers;
-        } else {
-            return "No users found!"
-        }
+        return userModel.find({});
     } catch (error) {
         return "Error while trying to get all users!" + error.message;
     }
@@ -23,11 +18,7 @@ const getUserById = async(id) => {
     try{
         let user = await userModel.findById(id);
         // console.log(user)
-        if (user) {
-            return user;
-        } else {
-            return "No User found with that ID";
-        }
+        return user || "No User found with that ID";
     } catch (error) {
         return "Error! " + error.message + ": " + id;
     }  
@@ -97,14 +88,9 @@ const importUsers = async (data)=>{
     }
 }
 
-const getCategories = async () => {
+const getCategories = () => {
     try {
-        let categories = await categoryModel.find({});
-        if (categories.length > 0) {
-            return categories;
-        } else {
-            return "No categories found!"
-        }
+        return categoryModel.find({});
     } catch (error) {
         return "Error while trying to get categories!" + error.message;
     }
@@ -138,23 +124,9 @@ const deleteCategory = async(id) => {
     }
 };
 
-const getProducts = async () => {
+const getProducts =  () => {
     try {
-        let products = await productModel.find({});
-        if (products.length > 0) {
-            products.sort(((a,b) => {
-                if (a.title < b.title) {
-                    return -1;
-                }
-                if (a.title > b.title) {
-                    return 1;
-                }
-                return 0;
-            }));
-            return products;
-        } else {
-            return "No products found!"
-        }
+        return productModel.find({});
     } catch (error) {
         return "Error while trying to get products!" + error.message;
     }
@@ -202,23 +174,9 @@ const getOrders = async () => {
     }
 };
 
-const getOrdersByUserId = async (id)=>{
+const getOrdersByUserId = (id)=>{
     try{
-        let orders = await orderModel.find({customerId: id});
-        if (orders.length > 0) {
-            orders.sort(((a,b) => {
-                if (a.createdAt < b.createdAt) {
-                    return 1;
-                }
-                if (a.createdAt > b.createdAt) {
-                    return -1;
-                }
-                return 0;
-            }));
-            return orders;
-        } else {
-            return "No orders found!"
-        }
+        return orderModel.find({customerId: id});
     } catch (error) {
         return "Error getting orders! " + error.message;
     }  

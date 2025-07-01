@@ -1,12 +1,13 @@
-require("dotenv").config();
-const mainRouter = require('./routers/mainRouter');
-const authRouter = require('./routers/authRouter');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const mongoDBSession = require('connect-mongodb-session')(session);
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./configs/connectDB');
+const mainRouter = require('./routers/mainRouter');
+const authRouter = require('./routers/authRouter');
+require("dotenv").config();
+
 const app = express();
 
 const store = new mongoDBSession({
@@ -24,6 +25,12 @@ app.use(cors({
     // }
 })) ;
 
+connectDB();
+
+//routers
+app.use("/api/", mainRouter);
+app.use("/api/auth", authRouter);
+
 app.post('/logout', async (req, res, next) => {
     try {
         // req.session.destroy();
@@ -33,12 +40,6 @@ app.post('/logout', async (req, res, next) => {
     }
     res.status(200).send();
 })
-
-connectDB();
-
-//routers
-app.use("/api/", mainRouter);
-app.use("/api/auth", authRouter);
 
 // server start
 app.listen(process.env.APP_PORT, () => {

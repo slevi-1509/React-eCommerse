@@ -1,9 +1,22 @@
 const MainDAL = require('../DAL/mainDAL');
 require("dotenv").config();
 
-const getAllUsers = () => {
-    return MainDAL.getAllUsers();
-}
+const getAllUsers = async() => {
+    let users = await MainDAL.getAllUsers();
+    if (users.length > 0) {
+        users.sort(((a,b) => {
+            if (a.fname < b.fname) {
+                return -1;
+            }
+            if (a.fname > b.fname) {
+                return 1;
+            }
+            return 0;
+        }));
+        return users;
+    } else {
+        return "No categories found!"
+    }}
 
 const getUserById = (id) => {
     return MainDAL.getUserById(id);
@@ -25,8 +38,23 @@ const addCategory = (data) => {
     return MainDAL.addCategory(data);
 };
 
-const getCategories = () => {
-    return MainDAL.getCategories();
+const getCategories = async() => {
+    let categories = await MainDAL.getCategories();
+    // console.log(products)
+    if (categories.length > 0) {
+        categories.sort(((a,b) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        }));
+        return categories;
+    } else {
+        return "No categories found!"
+    }
 };
 
 const updateCategory = (id, data) => {
@@ -37,8 +65,23 @@ const deleteCategory = (id) => {
     return MainDAL.deleteCategory(id);
 };
 
-const getProducts = () => {
-    return MainDAL.getProducts();
+const getProducts = async() => {
+    let products = await MainDAL.getProducts();
+    // console.log(products)
+    if (products.length > 0) {
+        products.sort(((a,b) => {
+            if (a.title < b.title) {
+                return -1;
+            }
+            if (a.title > b.title) {
+                return 1;
+            }
+            return 0;
+        }));
+        return products;
+    } else {
+        return "No products found!"
+    }
 };
 
 const addProduct = (data) => {
@@ -57,8 +100,22 @@ const getOrders = () => {
     return MainDAL.getOrders();
 };
 
-const getOrdersByUserId = (id) => {
-    return MainDAL.getOrdersByUserId(id);
+const getOrdersByUserId = async(id) => {
+    let orders = await MainDAL.getOrdersByUserId(id);
+    if (orders.length > 0) {
+        orders.sort(((a,b) => {
+            if (a.createdAt < b.createdAt) {
+                return 1;
+            }
+            if (a.createdAt > b.createdAt) {
+                return -1;
+            }
+            return 0;
+        }));
+        return orders;
+    } else {
+        return "No orders found!"
+    }
 };
 
 const addOrder = (data) => {
